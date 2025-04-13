@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+*{
+  box-sizing: border-box;
+  /* padding: 0; */
+}
+
+
+
+body {
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+}
+
+::-webkit-scrollbar {
+  width: 6px; /* Slim width */
+}
+
+/* Scrollbar Track */
+::-webkit-scrollbar-track {
+  background: #2e2e2e; /* Dark background (for a desktop app feel) */
+  border-radius: 10px;
+}
+
+/* Scrollbar Thumb */
+::-webkit-scrollbar-thumb {
+  background: #4a4a4a; /* Slightly lighter thumb */
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+/* Scrollbar Thumb Hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6b6b6b; /* Lighten on hover */
+}
+
+
+@layer components{
+
+  
+  .container{
+      @apply max-w-full w-[1440px] px-5 mx-auto;
+  }
+
+  .btn{
+      @apply bg-orange-500 py-[15px] px-[35px] rounded-[50px] text-white font-[600] mt-[38px];
+  }
+
+  .heading{
+      @apply text-[44px] leading-[54px] font-[700] text-orange-500;/*replace textcolor*/
+  }
+
+  .text_para{
+      @apply text-[18px] leading-[30px] font-[400] text-gray-600 mt-[18px];
+  }
+
+  .header{
+      @apply  w-full h-[75px];
+  }
+
+  .hero_section{
+      @apply   max-h-fit lg:px-[20px] bg-cover bg-no-repeat ;
+  }
+
+  .form_label{
+    @apply text-slate-600 font-semibold text-[16px] mb-2;
+  }
+
+  .form_input{
+    @apply w-full px-4 py-3 border border-solid border-[#0066ff61] focus:outline-none focus:border-blue-700 text-[16px] leading-7 text-slate-800 placeholder:text-slate-600 cursor-pointer rounded-md;
+  }
+
+
+}
+

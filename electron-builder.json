@@ -1,0 +1,30 @@
+{
+  "productName": "Kohinoor Inventory Management System",
+  "copyright": "© 2025 Kohinoor",
+  "appId": "com.kohinoor.electron.inventory",
+  "files": ["dist-electron", "dist-react"],
+  "icon": "./desktopIcon.png",
+  "extraMetadata": {
+    "description": "An inventory management application for warehouse operations."
+  },
+  "extraResources": [
+    "dist-electron/preload.js",
+    "dist-electron/database.js",
+    "src/assets/**",
+    {
+      "from": "node_modules/sqlite3",
+      "to": "node_modules/sqlite3"
+    }
+  ],
+  "mac": {
+    "target": "dmg"
+  },
+  "linux": {
+    "target": "AppImage",
+    "category": "Utility"
+  },
+  "win": {
+    "target": ["portable","nsis"],
+    "signingHashAlgorithms": []
+  }
+}
